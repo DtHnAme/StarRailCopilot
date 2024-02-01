@@ -56,6 +56,10 @@
       "AdbRestart": {
         "type": "checkbox",
         "value": false
+      },
+      "AdbWmResize": {
+        "type": "checkbox",
+        "value": false
       }
     },
     "EmulatorInfo": {

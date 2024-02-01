@@ -31,6 +31,7 @@ Emulator:
     value: MaaTouch
     option: [ minitouch, MaaTouch ]
   AdbRestart: false
+  AdbWmResize: false
 EmulatorInfo:
   Emulator:
     value: auto

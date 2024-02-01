@@ -275,6 +275,17 @@ class Uiautomator2(Connection):
         if width == 720 and height == 1280:
             return (width, height)
 
+        if self.config.Emulator_AdbWmResize:
+            w, h = (1280, 720) 
+            
+            if (width < height):
+                w, h = h, w
+            
+            logger.attr('Resize window', f'{w}x{h}')
+
+            self.window_resize(w, h)
+            return (w, h)
+
         logger.critical(f'Resolution not supported: {width}x{height}')
         logger.critical('Please set emulator resolution to 1280x720')
         raise RequestHumanTakeover

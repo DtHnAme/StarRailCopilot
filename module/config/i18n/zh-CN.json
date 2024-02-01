@@ -136,6 +136,10 @@
     "AdbRestart": {
       "name": "在检测不到设备的时候尝试重启adb",
       "help": ""
+    },
+    "AdbWmResize": {
+      "name": "强制重设窗口大小为1280x720",
+      "help": "当设备为实体机时需启用此设置"
     }
   },
   "EmulatorInfo": {

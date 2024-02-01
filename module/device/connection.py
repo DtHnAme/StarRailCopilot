@@ -881,3 +881,12 @@ class Connection(ConnectionAttr):
                 f'Multiple Star Rail packages found, auto package detection cannot decide which to choose, '
                 'please copy one of the available devices listed above to Alas.Emulator.PackageName')
             raise RequestHumanTakeover
+
+    @retry 
+    def window_resize(self, width, height):
+        self.adb_shell(['wm', 'size', str(width) + 'x' + str(height)])
+
+    @retry 
+    def window_reset(self):
+        self.adb_shell(['wm', 'size', 'reset'])
+

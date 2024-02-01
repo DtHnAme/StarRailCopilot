@@ -129,6 +129,9 @@ class Device(Screenshot, Control, AppControl, Platform):
         if self.config.Emulator_ScreenshotMethod == 'scrcpy':
             self._scrcpy_server_stop()
 
+        if self.config.Emulator_AdbWmResize:
+            self.window_reset()
+
     def stuck_record_add(self, button):
         self.detect_record.add(str(button))
 

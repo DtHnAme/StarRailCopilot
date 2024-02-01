@@ -136,6 +136,10 @@
     "AdbRestart": {
       "name": "Try to restart adb when no device found",
       "help": ""
+    },
+    "AdbWmResize": {
+      "name": "Force resize window to 1280x720",
+      "help": "This setting needs to be enabled when the device is a physical machine"
     }
   },
   "EmulatorInfo": {
